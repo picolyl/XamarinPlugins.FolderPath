@@ -28,10 +28,10 @@
         <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\wpa81\Plugin.FolderPath.Abstractions.XML" />
         <file src="FolderPath\Plugin.FolderPath.WindowsPhone81\bin\Release\Plugin.FolderPath.dll" target="lib\wpa81\Plugin.FolderPath.dll" />
         <file src="FolderPath\Plugin.FolderPath.WindowsPhone81\bin\Release\Plugin.FolderPath.XML" target="lib\wpa81\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\Xamarin.Android\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\Xamarin.Android\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.dll" target="lib\Xamarin.Android\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.XML" target="lib\Xamarin.Android\Plugin.FolderPath.XML" />
+        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\MonoAndroid\Plugin.FolderPath.Abstractions.dll" />
+        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\MonoAndroid\Plugin.FolderPath.Abstractions.XML" />
+        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.dll" target="lib\MonoAndroid\Plugin.FolderPath.dll" />
+        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.XML" target="lib\MonoAndroid\Plugin.FolderPath.XML" />
         <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\Xamarin.iOS\Plugin.FolderPath.Abstractions.dll" />
         <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\Xamarin.iOS\Plugin.FolderPath.Abstractions.XML" />
         <file src="FolderPath\Plugin.FolderPath.iOS\bin\Release\Plugin.FolderPath.dll" target="lib\Xamarin.iOS\Plugin.FolderPath.dll" />
