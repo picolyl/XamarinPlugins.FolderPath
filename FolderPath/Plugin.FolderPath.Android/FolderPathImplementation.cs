@@ -26,7 +26,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return Android.App.Application.Context.FilesDir.AbsolutePath;
             }
         }
 
@@ -59,7 +59,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return Android.App.Application.Context.CacheDir.AbsolutePath;
             }
         }
 
@@ -81,7 +81,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Android.OS.Environment.DirectoryPictures);
             }
         }
 
@@ -92,7 +92,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Android.OS.Environment.DirectoryMusic);
             }
         }
 
@@ -103,8 +103,20 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Android.OS.Environment.DirectoryMovies);
             }
+        }
+
+        private string GetPath(Java.IO.File javaFile)
+        {
+            var path = javaFile.AbsolutePath;
+            return path;
+        }
+
+        private string GetPath(string type)
+        {
+            var javaFile = Android.OS.Environment.GetExternalStoragePublicDirectory(type);
+            return GetPath(javaFile);
         }
     }
 }

@@ -1,5 +1,6 @@
 using Plugin.FolderPath.Abstractions;
 using System;
+using Windows.Storage;
 
 namespace Plugin.FolderPath
 {
@@ -15,7 +16,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return Windows.ApplicationModel.Package.Current.InstalledLocation.Path;
             }
         }
 
@@ -26,7 +27,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return ApplicationData.Current.LocalFolder.Path;
             }
         }
 
@@ -37,7 +38,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return ApplicationData.Current.RoamingFolder.Path;
             }
         }
 
@@ -48,7 +49,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return ApplicationData.Current.TemporaryFolder.Path;
             }
         }
 
@@ -59,7 +60,11 @@ namespace Plugin.FolderPath
         {
             get
             {
+#if WINDOWS_UWP || WINDOWS_PHONE_APP
+                return ApplicationData.Current.LocalCacheFolder.Path;
+#else
                 return null;
+#endif
             }
         }
 

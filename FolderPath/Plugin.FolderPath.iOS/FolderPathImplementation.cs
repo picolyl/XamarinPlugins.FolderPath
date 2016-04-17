@@ -1,5 +1,7 @@
+using Foundation;
 using Plugin.FolderPath.Abstractions;
 using System;
+using System.Linq;
 
 namespace Plugin.FolderPath
 {
@@ -15,7 +17,18 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return NSBundle.MainBundle.BundlePath;
+            }
+        }
+
+        /// <summary>
+        /// Resource file path
+        /// </summary>
+        public string Resource
+        {
+            get
+            {
+                return NSBundle.MainBundle.ResourcePath;
             }
         }
 
@@ -26,7 +39,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.LibraryDirectory);
             }
         }
 
@@ -48,7 +61,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return TemporaryDirectory;
             }
         }
 
@@ -59,7 +72,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.CachesDirectory);
             }
         }
 
@@ -70,7 +83,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.DocumentDirectory);
             }
         }
 
@@ -81,7 +94,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.PicturesDirectory);
             }
         }
 
@@ -92,7 +105,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.MusicDirectory);
             }
         }
 
@@ -103,7 +116,34 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(NSSearchPathDirectory.MoviesDirectory);
+            }
+        }
+
+        private string GetPath(NSSearchPathDirectory directory)
+        {
+            return NSSearchPath.GetDirectories(directory, NSSearchPathDomain.User).FirstOrDefault();
+        }
+
+        [System.Runtime.InteropServices.DllImport("/System/Library/Frameworks/Foundation.framework/Foundation")]
+        private static extern IntPtr NSHomeDirectory();
+
+        private static string HomeDirectory
+        {
+            get
+            {
+                return ((NSString)ObjCRuntime.Runtime.GetNSObject(NSHomeDirectory())).ToString();
+            }
+        }
+
+        [System.Runtime.InteropServices.DllImport("/System/Library/Frameworks/Foundation.framework/Foundation")]
+        private static extern IntPtr NSTemporaryDirectory();
+
+        private static string TemporaryDirectory
+        {
+            get
+            {
+                return ((NSString)ObjCRuntime.Runtime.GetNSObject(NSTemporaryDirectory())).ToString();
             }
         }
     }

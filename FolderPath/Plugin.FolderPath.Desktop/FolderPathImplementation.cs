@@ -15,7 +15,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return AppPath;
             }
         }
 
@@ -26,7 +26,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.LocalApplicationData, "Local");
             }
         }
 
@@ -37,7 +37,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.ApplicationData);
             }
         }
 
@@ -48,7 +48,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.LocalApplicationData, "Temporary");
             }
         }
 
@@ -59,7 +59,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.LocalApplicationData, "Cache");
             }
         }
 
@@ -70,7 +70,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.MyDocuments);
             }
         }
 
@@ -81,7 +81,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.MyPictures);
             }
         }
 
@@ -92,7 +92,7 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.MyMusic);
             }
         }
 
@@ -103,8 +103,137 @@ namespace Plugin.FolderPath
         {
             get
             {
-                return null;
+                return GetPath(Environment.SpecialFolder.MyVideos);
             }
         }
+
+        #region Helpers
+        private string GetPath(Environment.SpecialFolder specialFolder, string subFolder = "")
+        {
+            var path = Environment.GetFolderPath(specialFolder);
+            switch (specialFolder)
+            {
+                case Environment.SpecialFolder.ApplicationData:
+                case Environment.SpecialFolder.LocalApplicationData:
+                    path = System.IO.Path.Combine(path, CompanyName, AppName);
+                    System.IO.Directory.CreateDirectory(path);
+                    break;
+            }
+            if (!string.IsNullOrWhiteSpace(subFolder))
+            {
+                path = System.IO.Path.Combine(path, subFolder);
+                System.IO.Directory.CreateDirectory(path);
+            }
+            return path;
+        }
+
+        private Lazy<string> _appPath = new Lazy<string>(() =>
+        {
+            var path = "";
+            var assembly = System.Reflection.Assembly.GetEntryAssembly();
+            if (assembly == null)
+            {
+                assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            }
+            if (assembly != null)
+            {
+                path = System.IO.Path.GetDirectoryName(assembly.Location);
+            }
+            return path;
+        });
+        private string AppPath { get { return _appPath.Value; } }
+
+        private string _appName = "";
+        /// <summary>
+        /// Local/Roaming folder Application Name
+        /// </summary>
+        public string AppName
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(_appName))
+                {
+                    return _appName;
+                }
+                else if (!string.IsNullOrWhiteSpace(InternalAppName))
+                {
+                    return InternalAppName;
+                }
+                else
+                {
+                    throw new MemberAccessException("There is a need to set a valid value to AppName.");
+                }
+            }
+            set
+            {
+                _appName = value;
+            }
+        }
+
+        private string _companyName = "";
+        /// <summary>
+        /// Local/Roaming folder Company Name
+        /// </summary>
+        public string CompanyName
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(_companyName))
+                {
+                    return _companyName;
+                }
+                else if (!string.IsNullOrWhiteSpace(InternalCompanyName))
+                {
+                    return InternalCompanyName;
+                }
+                else
+                {
+                    throw new MemberAccessException("There is a need to set a valid value to AssemblyCompany of AssemblyInfo.cs.");
+                }
+            }
+            set
+            {
+                _companyName = value;
+            }
+        }
+
+        private static Lazy<string> _internalAppName = new Lazy<string>(() => GetInternalAppName());
+        private static string InternalAppName { get { return _internalAppName.Value; } }
+
+        private static string GetInternalAppName()
+        {
+            var assembly = System.Reflection.Assembly.GetEntryAssembly();
+            //if (assembly == null)
+            //{
+            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            //}
+            var appName = "";
+            if (assembly != null)
+            {
+                appName = System.IO.Path.GetFileNameWithoutExtension(assembly.Location);
+            }
+            return appName;
+        }
+
+        private static Lazy<string> _internalCompanyName = new Lazy<string>(() => GetInternalCompanyName());
+        private static string InternalCompanyName { get { return _internalCompanyName.Value; } }
+
+        private static string GetInternalCompanyName()
+        {
+            var assembly = System.Reflection.Assembly.GetEntryAssembly();
+            //if (assembly == null)
+            //{
+            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            //}
+            var companyName = "";
+            if (assembly != null)
+            {
+                var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.GetCustomAttribute(
+                    assembly, typeof(System.Reflection.AssemblyCompanyAttribute));
+                companyName = attribute.Company;
+            }
+            return companyName;
+        }
+        #endregion Helpers
     }
 }
