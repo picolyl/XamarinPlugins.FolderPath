@@ -4,8 +4,11 @@
         <id>FolderPath</id>
         <version>1.0.0</version>
         <authors>picolyl</authors>
+        <licenseUrl>https://github.com/picolyl/XamarinPlugins.FolderPath/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/picolyl/XamarinPlugins.FolderPath</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>FolderPath plugin for Xamarin</description>
+        <description>FolderPath plugins for Xamarin</description>
+        <tags>io storage file portable pcl winrt android ios xamarin monoandroid monodroid Xamarin.Mac Xamarin.iOS</tags>
     </metadata>
     <files>
         <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\net45\Plugin.FolderPath.Abstractions.dll" />
