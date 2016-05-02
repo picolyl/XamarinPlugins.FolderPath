@@ -19,7 +19,7 @@ It is Xamarin.Plugins to get the path of the folder.
 ## Usage
 
 ```C#
-using Plugin.FolderPath;
+using PCLStorage;
 var localFolderPath = FolderPath.Current.Local;
 ```
 

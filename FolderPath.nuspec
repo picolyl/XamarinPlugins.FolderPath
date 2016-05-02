@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>FolderPath</id>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <authors>picolyl</authors>
         <licenseUrl>https://github.com/picolyl/XamarinPlugins.FolderPath/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/picolyl/XamarinPlugins.FolderPath</projectUrl>
@@ -11,37 +11,37 @@
         <tags>io storage file portable pcl winrt android ios xamarin monoandroid monodroid Xamarin.Mac Xamarin.iOS</tags>
     </metadata>
     <files>
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\net45\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\net45\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Desktop\bin\Release\Plugin.FolderPath.dll" target="lib\net45\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Desktop\bin\Release\Plugin.FolderPath.XML" target="lib\net45\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\netcore45\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\netcore45\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.WindowsStore\bin\Release\Plugin.FolderPath.dll" target="lib\netcore45\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.WindowsStore\bin\Release\Plugin.FolderPath.XML" target="lib\netcore45\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\portable-net45+netcore45+wpa81\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\portable-net45+netcore45+wpa81\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath\bin\Release\Plugin.FolderPath.dll" target="lib\portable-net45+netcore45+wpa81\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath\bin\Release\Plugin.FolderPath.XML" target="lib\portable-net45+netcore45+wpa81\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\uap\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\uap\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.UWP\bin\Release\Plugin.FolderPath.dll" target="lib\uap\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.UWP\bin\Release\Plugin.FolderPath.XML" target="lib\uap\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\wpa81\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\wpa81\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.WindowsPhone81\bin\Release\Plugin.FolderPath.dll" target="lib\wpa81\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.WindowsPhone81\bin\Release\Plugin.FolderPath.XML" target="lib\wpa81\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\MonoAndroid\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\MonoAndroid\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.dll" target="lib\MonoAndroid\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Android\bin\Release\Plugin.FolderPath.XML" target="lib\MonoAndroid\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\Xamarin.iOS\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\Xamarin.iOS\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.iOS\bin\Release\Plugin.FolderPath.dll" target="lib\Xamarin.iOS\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.iOS\bin\Release\Plugin.FolderPath.XML" target="lib\Xamarin.iOS\Plugin.FolderPath.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.dll" target="lib\Xamarin.Mac20\Plugin.FolderPath.Abstractions.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Abstractions\bin\Release\Plugin.FolderPath.Abstractions.XML" target="lib\Xamarin.Mac20\Plugin.FolderPath.Abstractions.XML" />
-        <file src="FolderPath\Plugin.FolderPath.Mac\bin\Release\Plugin.FolderPath.dll" target="lib\Xamarin.Mac20\Plugin.FolderPath.dll" />
-        <file src="FolderPath\Plugin.FolderPath.Mac\bin\Release\Plugin.FolderPath.xml" target="lib\Xamarin.Mac20\Plugin.FolderPath.xml" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\net45\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\net45\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.Desktop\bin\Release\FolderPath.dll" target="lib\net45\FolderPath.dll" />
+        <file src="Plugins\FolderPath.Desktop\bin\Release\FolderPath.XML" target="lib\net45\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\netcore45\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\netcore45\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.WindowsStore\bin\Release\FolderPath.dll" target="lib\netcore45\FolderPath.dll" />
+        <file src="Plugins\FolderPath.WindowsStore\bin\Release\FolderPath.XML" target="lib\netcore45\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\portable-net45+netcore45+wpa81\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\portable-net45+netcore45+wpa81\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath\bin\Release\FolderPath.dll" target="lib\portable-net45+netcore45+wpa81\FolderPath.dll" />
+        <file src="Plugins\FolderPath\bin\Release\FolderPath.XML" target="lib\portable-net45+netcore45+wpa81\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\uap\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\uap\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.UWP\bin\Release\FolderPath.dll" target="lib\uap\FolderPath.dll" />
+        <file src="Plugins\FolderPath.UWP\bin\Release\FolderPath.XML" target="lib\uap\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\wpa81\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\wpa81\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.WindowsPhone81\bin\Release\FolderPath.dll" target="lib\wpa81\FolderPath.dll" />
+        <file src="Plugins\FolderPath.WindowsPhone81\bin\Release\FolderPath.XML" target="lib\wpa81\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\MonoAndroid\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\MonoAndroid\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.Android\bin\Release\FolderPath.dll" target="lib\MonoAndroid\FolderPath.dll" />
+        <file src="Plugins\FolderPath.Android\bin\Release\FolderPath.XML" target="lib\MonoAndroid\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\Xamarin.iOS\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\Xamarin.iOS\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.iOS\bin\Release\FolderPath.dll" target="lib\Xamarin.iOS\FolderPath.dll" />
+        <file src="Plugins\FolderPath.iOS\bin\Release\FolderPath.XML" target="lib\Xamarin.iOS\FolderPath.XML" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.dll" target="lib\Xamarin.Mac20\FolderPath.Abstractions.dll" />
+        <file src="Plugins\FolderPath.Abstractions\bin\Release\FolderPath.Abstractions.XML" target="lib\Xamarin.Mac20\FolderPath.Abstractions.XML" />
+        <file src="Plugins\FolderPath.Mac\bin\Release\FolderPath.dll" target="lib\Xamarin.Mac20\FolderPath.dll" />
+        <file src="Plugins\FolderPath.Mac\bin\Release\FolderPath.xml" target="lib\Xamarin.Mac20\FolderPath.xml" />
     </files>
 </package>
