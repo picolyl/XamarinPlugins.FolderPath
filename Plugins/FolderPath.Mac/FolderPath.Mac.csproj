@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;__MAC__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -43,6 +43,7 @@
     <EnableCodeSigning>false</EnableCodeSigning>
     <EnablePackageSigning>false</EnablePackageSigning>
     <DocumentationFile>bin\Release\FolderPath.xml</DocumentationFile>
+    <DefineConstants>__MAC__;</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

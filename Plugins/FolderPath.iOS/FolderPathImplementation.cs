@@ -39,7 +39,22 @@ namespace PCLStorage
         {
             get
             {
-                return GetPath(NSSearchPathDirectory.LibraryDirectory);
+                var libraryPath = GetPath(NSSearchPathDirectory.LibraryDirectory);
+                var localPath = libraryPath;
+#if __MAC__
+
+                var process = System.Diagnostics.Process.GetCurrentProcess();
+                var filename = System.IO.Path.GetFileNameWithoutExtension(process.MainModule.FileName);
+                if (!string.IsNullOrWhiteSpace(filename))
+                {
+                    localPath = System.IO.Path.Combine(libraryPath, "Application Support", filename);
+                    if (!System.IO.Directory.Exists(localPath))
+                    {
+                        System.IO.Directory.CreateDirectory(localPath);
+                    }
+                }
+#endif
+                return localPath;
             }
         }
 
