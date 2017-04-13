@@ -203,11 +203,7 @@ namespace PCLStorage
         private static string GetInternalAppName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            //if (assembly == null)
-            //{
-            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            //}
-            var appName = "";
+            var appName = "FolderPath";
             if (assembly != null)
             {
                 appName = System.IO.Path.GetFileNameWithoutExtension(assembly.Location);
@@ -221,15 +217,12 @@ namespace PCLStorage
         private static string GetInternalCompanyName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            //if (assembly == null)
-            //{
-            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            //}
-            var companyName = "";
+            var companyName = "FolderPath_Use_AssemblyCompanyAttribute_To_Change_On_Yours";
             if (assembly != null)
             {
-                var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.GetCustomAttribute(
-                    assembly, typeof(System.Reflection.AssemblyCompanyAttribute));
+                var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.
+                    GetCustomAttribute(assembly,
+                    typeof(System.Reflection.AssemblyCompanyAttribute));
                 companyName = attribute.Company;
             }
             return companyName;
