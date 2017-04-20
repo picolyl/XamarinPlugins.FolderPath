@@ -39,8 +39,9 @@ This is a common way for Xamarin Plugins described by James Montemagno in post:
 http://motzcod.es/post/159267241302/unit-testing-plugins-for-xamarin
 ```C#
 var folderPath = new Moq.Mock<IFolderPath>();
+folderPath.Setup(f => f.Local).Returns(TestContext.DeploymentDirectory);
+
 FolderPath.Current = folderPath.Object;
-var path = Path.Combine(TestContext.DeploymentDirectory, "TestData");
 ```
 
 2. Override AppName manually 
