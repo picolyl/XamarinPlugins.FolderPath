@@ -203,7 +203,7 @@ namespace PCLStorage
         private static string GetInternalAppName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            var appName = "FolderPath";
+            var appName = "";
             if (assembly != null)
             {
                 appName = System.IO.Path.GetFileNameWithoutExtension(assembly.Location);
@@ -217,7 +217,7 @@ namespace PCLStorage
         private static string GetInternalCompanyName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            var companyName = "FolderPath_Use_AssemblyCompanyAttribute_To_Change_On_Yours";
+            var companyName = "";
             if (assembly != null)
             {
                 var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.
