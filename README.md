@@ -32,6 +32,24 @@ AssemblyInfo.cs
 [assembly: AssemblyCompany("TestApp")]
 ```
 
+If you can't set the company name in the AssemblyInfo.cs for some reason, in unit tests for example. 
+You can:
+1. Use your implementation or a mock of IFolderPath.
+This is a common way for Xamarin Plugins described by James Montemagno in post:
+http://motzcod.es/post/159267241302/unit-testing-plugins-for-xamarin
+```C#
+var folderPath = new Moq.Mock<IFolderPath>();
+folderPath.Setup(f => f.Local).Returns(TestContext.DeploymentDirectory);
+
+FolderPath.Current = folderPath.Object;
+```
+
+2. Override AppName manually 
+```C#
+((FolderPathImplementation)FolderPath.Current).AppName = "TestApp";
+((FolderPathImplementation)FolderPath.Current).CompanyName = "TestCompany";
+```
+
 ## License
 
 [Ms-PL](https://msdn.microsoft.com/library/gg592960.aspx "Ms-PL")

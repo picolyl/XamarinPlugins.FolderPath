@@ -203,10 +203,6 @@ namespace PCLStorage
         private static string GetInternalAppName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            //if (assembly == null)
-            //{
-            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            //}
             var appName = "";
             if (assembly != null)
             {
@@ -221,10 +217,6 @@ namespace PCLStorage
         private static string GetInternalCompanyName()
         {
             var assembly = System.Reflection.Assembly.GetEntryAssembly();
-            //if (assembly == null)
-            //{
-            //    assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            //}
             var companyName = "";
             if (assembly != null)
             {

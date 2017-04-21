@@ -24,6 +24,10 @@ namespace PCLStorage
                 }
                 return ret;
             }
+            set
+            {
+                Implementation = new Lazy<IFolderPath>(() => value);
+            }
         }
 
         static IFolderPath CreateFolderPath()
