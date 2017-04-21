@@ -220,9 +220,8 @@ namespace PCLStorage
             var companyName = "";
             if (assembly != null)
             {
-                var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.
-                    GetCustomAttribute(assembly,
-                    typeof(System.Reflection.AssemblyCompanyAttribute));
+                var attribute = (System.Reflection.AssemblyCompanyAttribute)Attribute.GetCustomAttribute(
+                    assembly, typeof(System.Reflection.AssemblyCompanyAttribute));
                 companyName = attribute.Company;
             }
             return companyName;

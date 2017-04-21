@@ -50,7 +50,6 @@ FolderPath.Current = folderPath.Object;
 ((FolderPathImplementation)FolderPath.Current).CompanyName = "TestCompany";
 ```
 
-
 ## License
 
 [Ms-PL](https://msdn.microsoft.com/library/gg592960.aspx "Ms-PL")

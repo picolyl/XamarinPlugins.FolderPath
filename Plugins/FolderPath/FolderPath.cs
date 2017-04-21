@@ -8,9 +8,7 @@ namespace PCLStorage
     /// </summary>
     public class FolderPath
     {
-        static Lazy<IFolderPath> Implementation = new Lazy<IFolderPath>(
-            () => CreateFolderPath(),
-            System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static Lazy<IFolderPath> Implementation = new Lazy<IFolderPath>(() => CreateFolderPath(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Current settings to use
